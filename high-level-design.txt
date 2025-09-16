@@ -1,0 +1,76 @@
+Landing Page Layout (Skeleton MVP)
+
+Header / Hero
+	•	Logo: Select by SaiJaiAI
+	•	Tagline: “Hotels meet Instagram creators. Free stays for content. That’s it.”
+	•	Primary CTA (button): “Join Now”
+	•	Secondary CTA: “Browse Listings”
+
+⸻
+
+Section 1: How It Works (3 steps)
+
+For Hotels
+	1.	Post your offer (free stay in exchange for IG content).
+	2.	Browse creator profiles with upcoming travel plans.
+	3.	Reach out directly to make arrangements.
+
+For Creators
+	1.	Post your travel calendar and IG profile.
+	2.	Browse hotel offers at your destination.
+	3.	Reach out directly to claim stays.
+
+(Visual: simple 3-step icons, like a bed, a phone, and a camera.)
+
+⸻
+
+Section 2: Why Join
+	•	Hotels: Reach new audiences without ad spend.
+	•	Creators: Travel more, stay free.
+	•	Simple: No middlemen, no escrow, no ratings — just a directory.
+
+(Visual: two columns, “For Hotels” and “For Creators.”)
+
+⸻
+
+Section 3: Pricing
+	•	Flat sign-up fee (one-time or subscription).
+	•	Example:
+	•	Hotels: $99/year
+	•	Creators: $29/year
+	•	Clear note: “We do not take commissions. Once connected, you work directly.”
+
+(Visual: two simple pricing cards.)
+
+⸻
+
+Section 4: Live Listings (Classified Board Preview)
+	•	Hotel Offers (cards):
+	•	“Bangkok Boutique Hotel — 2 nights free stay, looking for IG posts July–Aug.”
+	•	CTA: View Contact Info (locked until signup).
+	•	Creator Profiles (cards):
+	•	“@TravelWithAnna — 25K followers, planning Bangkok July 10–14.”
+	•	CTA: View Contact Info (locked until signup).
+
+(Visual: Craigslist-like feed; simple grid with minimal design.)
+
+⸻
+
+Section 5: FAQ
+	•	Do you handle payments? → No, all arrangements are direct.
+	•	Can I trust creators? → We vet signups manually for legitimacy.
+	•	Why pay a fee? → To keep listings high-quality and serious only.
+
+⸻
+
+Footer
+	•	Links: Terms, Privacy, Contact.
+	•	Simple branding: Select by SaiJaiAI Inc.
+
+⸻
+
+Tone & Style
+	•	Short, plain language (no fluff).
+	•	Minimal design: neutral background, one accent color.
+	•	Simple icons, card grid for listings.
+	•	No extra features beyond: Join / Post / Browse / Contact.

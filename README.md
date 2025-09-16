@@ -1,4 +1,19 @@
-Welcome to your new TanStack app! 
+# Select by SaiJaiAI Inc
+
+Select by SaiJaiAI Inc is a curated marketplace connecting **hospitality & tourism buyers** (hotels, resorts, DMOs) with **premium content creators**. Buyers discover, evaluate, and book creators for stays, cash payments, discounts, and hybrid compensation. The platform enforces quality through application vetting, verification, performance metrics, and reputation.
+
+## Key Features
+
+- **For Buyers:** Efficient creator discovery, proof of quality, transparent pricing, structured deliverables, built-in contracting, and performance attribution
+- **For Creators:** Access to vetted buyers, professional tools to package offerings, fair compensation, and reputation building
+- **Quality Control:** Application vetting, verification processes, performance metrics, and reputation systems
+
+## Technology Stack
+
+- **Frontend:** Vite + React (TypeScript) + shadcn/ui + Tailwind CSS
+- **Backend:** Firebase (Auth, Firestore, Storage, Functions, Hosting, Cloud Messaging)
+- **Testing:** Playwright for E2E testing
+- **Development:** ESLint for code quality
 
 # Getting Started
 
