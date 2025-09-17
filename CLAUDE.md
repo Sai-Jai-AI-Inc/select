@@ -61,28 +61,64 @@ This marketplace application is designed with:
 4. **Testing**: Playwright for E2E tests, Vitest for unit tests
 5. **Build**: Vite for fast development and optimized production builds
 
-## Key Application Features
+## Current Implementation Status
 
-### Creator Onboarding
+### Completed Features
+
+#### Landing Page (/)
+- Clean, minimalist design with monotone color scheme
+- Source Serif headings, Geist Sans body text
+- Hero section with clear value proposition
+- How It Works sections for Hotels and Creators
+- Pricing cards ($99/year hotels, $29/year creators)
+- Live listings preview with sample data
+- FAQ section and footer
+
+#### Hotel Dashboard (/hotel/dashboard)
+- **Humanized Creator Notifications**: Email-style inbox showing creators planning trips
+- **Real Profile Pictures**: Professional headshots from Unsplash for authentic feel
+- **Enhanced Personality Data**: Each creator has unique traits (Adventure Seeker, Luxury Enthusiast, etc.)
+- **Read/Unread States**: Distinct visual styling with appropriate mail icons (Mail vs MailOpen)
+- **Rich Creator Context**: Recent activity, content style, trip purpose, follower counts
+- **Stats Overview**: Unread notifications, monthly metrics, total reach
+- **Quick Actions**: View profile, contact creator, mark as read
+
+#### Creator Profiles (/creator/:id)
+- **Comprehensive Creator Information**: Bio, personality, content style, recent activity
+- **Social Metrics**: Followers, posts, engagement rate with visual presentation
+- **Upcoming Trips**: Planned destinations with dates and trip duration
+- **Recent Posts**: Instagram-style content grid with engagement metrics
+- **Audience Demographics**: Top countries with percentage breakdowns
+- **Contact Integration**: Email and social media handles
+
+#### Hotel Profiles (/hotel/:id)
+- **Property Details**: Hotel information, amenities, room types, ratings
+- **Current Collaboration Offers**: Active partnerships with detailed requirements
+- **Success Stories**: Past collaborations with reach and engagement metrics
+- **Content Guidelines**: Specific requirements for creator partnerships
+- **Contact Information**: Partnership details and property location
+
+### Planned Features (Not Yet Implemented)
+
+#### Creator Onboarding
 - Multi-step profile creation with progress tracking
 - Social media OAuth integration (Instagram, TikTok, YouTube, X)
 - Portfolio upload with Firebase Storage
 - Availability calendar with destination management
 - Application vetting workflow
 
-### Buyer Discovery
-- Advanced search with multiple filters (location, dates, audience, platform, pricing)
-- Creator detail views with metrics and portfolio
+#### Advanced Buyer Discovery
+- Real-time search with multiple filters (location, dates, audience, platform, pricing)
 - Shortlist management with team collaboration
 - Performance analytics and attribution
 
-### Core Functionality
-- Role-based authentication and authorization
+#### Core Backend Functionality
+- Firebase Authentication integration
+- Firestore database connections
 - File upload with drag-and-drop interface
 - Calendar integration for availability/booking
 - Real-time search and filtering
 - Form validation with Zod + TanStack Form
-- Responsive design for mobile and desktop
 
 ## Firebase Integration
 
@@ -118,14 +154,65 @@ Key Firebase files to expect:
   - Application submission and review workflows
 - Firebase emulators for testing backend integration locally
 
+## Current Route Structure
+
+The application uses TanStack Router with the following implemented routes:
+
+```
+/ - Landing page (App.tsx)
+/hotel/dashboard - Hotel notification dashboard (HotelDashboard.tsx)
+/creator/:id - Creator profile pages (CreatorProfile.tsx)
+/hotel/:id - Hotel profile pages (HotelProfile.tsx)
+```
+
+Navigation is handled via the Header component with links to all major sections.
+
+## Design System
+
+### Typography
+- **Headings**: Source Serif 4 (h1, h2, h3, h4, h5, h6)
+- **Body Text**: Geist Sans for all content, buttons, UI elements
+- **Code**: Geist Sans (no longer using monospace fonts)
+
+### Color Scheme
+- **Minimalist Monotone**: Pure blacks, whites, and grays
+- **CSS Variables**: Uses semantic tokens (background, foreground, muted-foreground, etc.)
+- **Light/Dark Support**: Color scheme supports both light and dark themes
+
+### Components
+- **shadcn/ui**: Button, Card, Badge components implemented
+- **Consistent Spacing**: Uses Tailwind's spacing scale
+- **Responsive Design**: Mobile-first approach with proper breakpoints
+
+## Mock Data Structure
+
+### Creator Data
+- Real Unsplash profile images for authentic feel
+- Personality traits: Adventure Seeker, Luxury Enthusiast, Cultural Explorer, Budget Explorer
+- Rich travel information: upcoming trips, recent content, audience demographics
+- Social metrics: followers, engagement rates, recent activity
+
+### Hotel Data
+- Property details with amenities and room types
+- Active collaboration offers with specific requirements
+- Success stories from past partnerships
+- Content guidelines and contact information
+
 ## Development Guidelines
 
 When working on this marketplace:
 
-1. **Forms**: Use TanStack Form with Zod validation for all user inputs
-2. **File Uploads**: Implement drag-and-drop with Firebase Storage integration
-3. **Search**: Design for fast response times (<300ms p95) with proper indexing
-4. **Calendar**: Use date range pickers for availability and booking workflows
-5. **Responsive**: Mobile-first design with shadcn/ui components
-6. **State**: Use React Context for global state management
-7. **Performance**: Implement loading states, error boundaries, and progressive enhancement
+1. **Typography**: Use Source Serif for headings, Geist Sans for everything else
+2. **Colors**: Stick to the monotone palette using CSS custom properties
+3. **Components**: Leverage existing shadcn/ui components for consistency
+4. **Images**: Use high-quality Unsplash images for creator profiles (150x150 crop=face)
+5. **Data**: Follow established patterns for creator/hotel mock data structure
+6. **Routing**: Use TanStack Router with proper parameter handling
+7. **Responsive**: Mobile-first design with proper breakpoints
+8. **Performance**: Implement loading states, error boundaries, and progressive enhancement
+
+## Development Server
+
+- **Port**: Runs on localhost:3002 (3000 and 3001 typically in use)
+- **Hot Reload**: Vite HMR for instant updates during development
+- **Build**: `npm run dev` for development, `npm run build` for production
