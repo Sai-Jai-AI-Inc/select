@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { MapPin, Calendar, Users, Heart, MessageCircle, Share, Instagram, Globe, Mail } from "lucide-react"
+import { MapPin, Calendar, Users, Heart, MessageCircle, Instagram, Globe, Mail } from "lucide-react"
 import { useParams } from '@tanstack/react-router'
 
 // Mock creator data

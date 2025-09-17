@@ -244,7 +244,7 @@ export default function HotelDashboard() {
                         {/* Action buttons */}
                         <div className="flex gap-2 flex-wrap">
                           <Button asChild size="sm">
-                            <Link to={`/creator/${notification.id}`}>
+                            <Link to={`/creator/$id`} params={{ id: `${notification.id}` }}>
                               View Full Profile
                             </Link>
                           </Button>
