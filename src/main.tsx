@@ -10,6 +10,9 @@ import {
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
 import Header from './components/Header'
+import HotelDashboard from './components/HotelDashboard'
+import CreatorProfile from './components/CreatorProfile'
+import HotelProfile from './components/HotelProfile'
 
 import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
@@ -32,8 +35,29 @@ const indexRoute = createRoute({
   component: App,
 })
 
+const hotelDashboardRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/hotel/dashboard',
+  component: HotelDashboard,
+})
+
+const creatorProfileRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/creator/$id',
+  component: CreatorProfile,
+})
+
+const hotelProfileRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/hotel/$id',
+  component: HotelProfile,
+})
+
 const routeTree = rootRoute.addChildren([
-  indexRoute
+  indexRoute,
+  hotelDashboardRoute,
+  creatorProfileRoute,
+  hotelProfileRoute,
 ])
 
 const router = createRouter({
